@@ -10,12 +10,13 @@
 		299B7C97C0BE33726583F383 /* Pods_TourGuideUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C52FAE61E2B719077D5662 /* Pods_TourGuideUITests.framework */; };
 		2CBDFA211B3B8CB42544CE65 /* Pods_TourGuideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF3B6611FF1023A60BEDF61 /* Pods_TourGuideTests.framework */; };
 		96371A831DA9B10B00EC1D3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96371A821DA9B10B00EC1D3E /* AppDelegate.swift */; };
-		96371A851DA9B10B00EC1D3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96371A841DA9B10B00EC1D3E /* ViewController.swift */; };
 		96371A881DA9B10B00EC1D3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96371A861DA9B10B00EC1D3E /* Main.storyboard */; };
 		96371A8A1DA9B10B00EC1D3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96371A891DA9B10B00EC1D3E /* Assets.xcassets */; };
 		96371A8D1DA9B10B00EC1D3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96371A8B1DA9B10B00EC1D3E /* LaunchScreen.storyboard */; };
 		96371A981DA9B10B00EC1D3E /* TourGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96371A971DA9B10B00EC1D3E /* TourGuideTests.swift */; };
 		96371AA31DA9B10B00EC1D3E /* TourGuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96371AA21DA9B10B00EC1D3E /* TourGuideUITests.swift */; };
+		96371AB11DA9B4FE00EC1D3E /* DistrictTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96371AB01DA9B4FE00EC1D3E /* DistrictTableViewController.swift */; };
+		96371AB31DA9BCAE00EC1D3E /* MapTourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96371AB21DA9BCAE00EC1D3E /* MapTourViewController.swift */; };
 		998327F62AC9C7B87CFAF8BB /* Pods_TourGuide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206FA3854CE451B604AE1AA1 /* Pods_TourGuide.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +46,6 @@
 		7B32DBF7334D41ADC4ED3616 /* Pods-TourGuide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TourGuide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TourGuide/Pods-TourGuide.debug.xcconfig"; sourceTree = "<group>"; };
 		96371A7F1DA9B10B00EC1D3E /* TourGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TourGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96371A821DA9B10B00EC1D3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		96371A841DA9B10B00EC1D3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		96371A871DA9B10B00EC1D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96371A891DA9B10B00EC1D3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96371A8C1DA9B10B00EC1D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +56,8 @@
 		96371A9E1DA9B10B00EC1D3E /* TourGuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TourGuideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96371AA21DA9B10B00EC1D3E /* TourGuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourGuideUITests.swift; sourceTree = "<group>"; };
 		96371AA41DA9B10B00EC1D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96371AB01DA9B4FE00EC1D3E /* DistrictTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistrictTableViewController.swift; sourceTree = "<group>"; };
+		96371AB21DA9BCAE00EC1D3E /* MapTourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTourViewController.swift; sourceTree = "<group>"; };
 		A82D23873140853A9B6BEDA2 /* Pods-TourGuideUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TourGuideUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TourGuideUITests/Pods-TourGuideUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B5F7FEC043C3C4A83261CD4F /* Pods-TourGuide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TourGuide.release.xcconfig"; path = "Pods/Target Support Files/Pods-TourGuide/Pods-TourGuide.release.xcconfig"; sourceTree = "<group>"; };
 		C4CDC7EE4245084FF8BAB740 /* Pods-TourGuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TourGuideTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TourGuideTests/Pods-TourGuideTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,11 +140,12 @@
 			isa = PBXGroup;
 			children = (
 				96371A821DA9B10B00EC1D3E /* AppDelegate.swift */,
-				96371A841DA9B10B00EC1D3E /* ViewController.swift */,
 				96371A861DA9B10B00EC1D3E /* Main.storyboard */,
 				96371A891DA9B10B00EC1D3E /* Assets.xcassets */,
 				96371A8B1DA9B10B00EC1D3E /* LaunchScreen.storyboard */,
 				96371A8E1DA9B10B00EC1D3E /* Info.plist */,
+				96371AB01DA9B4FE00EC1D3E /* DistrictTableViewController.swift */,
+				96371AB21DA9BCAE00EC1D3E /* MapTourViewController.swift */,
 			);
 			path = TourGuide;
 			sourceTree = "<group>";
@@ -449,8 +452,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96371A851DA9B10B00EC1D3E /* ViewController.swift in Sources */,
 				96371A831DA9B10B00EC1D3E /* AppDelegate.swift in Sources */,
+				96371AB11DA9B4FE00EC1D3E /* DistrictTableViewController.swift in Sources */,
+				96371AB31DA9BCAE00EC1D3E /* MapTourViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
