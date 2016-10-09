@@ -23,22 +23,23 @@ class MapTourViewController: UIViewController, GMSMapViewDelegate {
     
       gmsMapView.camera = hotel
 
-      
-      let locations = getLocationsForDistrict()
-      
-      for location in locations {
-        let marker = location.mapMarker
-        marker.map = gmsMapView
-      }
+      getLocationsForDistrict()
+
 
     }
   
-    func getLocationsForDistrict() -> [LocationViewModel] {
+    func getLocationsForDistrict() {
       let api = API.sharedInstance
-//      api.locations(district: district!) { response in
-//        print(response)
-//      }
-      return api.locations(district: district!)
+      api.locations(district: district!) { response in
+        print("Response from api: ", response)
+        
+          for location in response {
+            print("Drawing marker for location: ", location.mapMarker)
+            let marker = location.mapMarker
+            marker.map = self.gmsMapView
+          }
+      }
+
     }
 
     override func didReceiveMemoryWarning() {

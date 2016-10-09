@@ -12,23 +12,18 @@ import SwiftyJSON
 
 class Location {
 
+  var name: String?
   var latitude : Double?
   var longitude: Double?
   var address : String?
   var district : Int?
   
-//  init(locationJSON : JSON) {
-//    self.latitude = locationJSON["latitude"].doubleValue
-//    self.longitude = locationJSON["longitude"].doubleValue
-//    self.address = locationJSON["address"].stringValue
-//    self.district = locationJSON["district"].intValue
-//  }
-  
-  init(latitude: Double?, longitude: Double?, address: String?, district: Int?) {
-    self.latitude = latitude
-    self.longitude = longitude
-    self.address = address
-    self.district = district
+  init(locationJSON : JSON) {
+    self.name = locationJSON["name"].stringValue
+    self.latitude = locationJSON["latitude"].doubleValue
+    self.longitude = locationJSON["longitude"].doubleValue
+    self.address = locationJSON["address"].stringValue
+    self.district = locationJSON["district"].intValue
   }
   
 }

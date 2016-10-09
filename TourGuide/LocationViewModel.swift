@@ -18,7 +18,7 @@ class LocationViewModel {
     let position = CLLocationCoordinate2DMake(self.location.latitude!, self.location.longitude!)
     
     let marker = GMSMarker(position: position)
-    marker.title = "EiffelTower"
+    marker.title = self.location.name
     marker.snippet = self.location.address
     
     return marker

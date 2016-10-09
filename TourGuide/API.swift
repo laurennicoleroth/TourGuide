@@ -13,47 +13,47 @@ import SwiftyJSON
 class API {
   
   static let sharedInstance = API()
-
-
-//  func locations(district: Int, completion : @escaping ([LocationViewModel]) -> ()) {
-  func locations(district: Int) -> [LocationViewModel] {
   
-//    let districtRequest = "/districts/\(district)"
-//    let urlString = "" + districtRequest
-    
-//    Alamofire.request(urlString, method: .get, encoding: JSONEncoding.default)
-//      .downloadProgress() { progress in
-//        print("Progress downloading routes: \(progress.fractionCompleted)")
-//      }
-//      .validate { request, response, data in
-//        
-//        return .success
-//      }
-//      .responseJSON { response in
-//        
-//        let json = JSON(data: response.data!)
-//        
-//        print("json from the server: \(json)")
-//        
-//        completion(self.locationsFromJSON(incomingJSON: json))
-//    }
+  let endpoint = "http://blackbeardev.com:3000/"
+  
+  func locations(district: Int, completion : @escaping ([LocationViewModel]) -> ()) {
 
-    return [
-      LocationViewModel(location: Location(latitude: 48.858731, longitude: 2.2944813, address: "Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France", district: district))
-    ]
+    let urlString = "http://blackbeardev.com:3000/districts/\(district)"
+
+    Alamofire.request(urlString, method: .get, encoding: JSONEncoding.default)
+      .downloadProgress() { progress in
+        print("Progress downloading routes: \(progress.fractionCompleted)")
+      }
+      .validate { request, response, data in
+        
+        print("Request: ", request)
+        
+        return .success
+      }
+      .responseJSON { response in
+        print("Response is: ", response)
+        let json = JSON(data: response.data!)
+        
+        print("json from the server: \(json)")
+        
+        completion(self.locationsFromJSON(incomingJSON: json))
+    }
+
   }
   
   func locationsFromJSON(incomingJSON: SwiftyJSON.JSON) -> [LocationViewModel] {
     var locationViewModels: [LocationViewModel] = []
     
-//    for (_, subJson):(String, JSON) in incomingJSON {
-//      locationViewModels.append(LocationViewModel(location: Location(locationJSON: subJson)))
-//    }
+    for (_, subJson):(String, JSON) in incomingJSON {
+      print("Subjson: ", subJson)
+      locationViewModels.append(LocationViewModel(location: Location(locationJSON: subJson)))
+    }
     
+    print("Location view models count: ", locationViewModels.count)
     return locationViewModels
   }
   
-//  func locationFromJSON(incomingJSON: SwiftyJSON.JSON) -> LocationViewModel {
-//    return LocationViewModel(location: Location(locationJSON: incomingJSON))
-//  }
+  func locationFromJSON(incomingJSON: SwiftyJSON.JSON) -> LocationViewModel {
+    return LocationViewModel(location: Location(locationJSON: incomingJSON))
+  }
 }
