@@ -7,29 +7,53 @@
 //
 
 import UIKit
+import GoogleMaps
 
-class MapTourViewController: UIViewController {
+class MapTourViewController: UIViewController, GMSMapViewDelegate {
+
+    let hotelBaltimore = CLLocationCoordinate2DMake(48.866434, 2.289143)
+    var district : Int?
+    @IBOutlet weak var gmsMapView: GMSMapView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+      let hotel = GMSCameraPosition.camera(withLatitude: hotelBaltimore.latitude,
+                                                       longitude: hotelBaltimore.longitude, zoom: 14)
+    
+      gmsMapView.camera = hotel
+      
+      let locations = getLocationsForDistrict()
+      
+      for location in locations {
+        let eiffelTower = CLLocationCoordinate2DMake(48.858731, 2.2944813)
+        
+        let eiffel = GMSMarker(position: eiffelTower)
+        eiffel.title = "EiffelTower"
+        eiffel.map = gmsMapView
+        eiffel.snippet = "Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France"
+        
+        let baltimore = GMSMarker(position: hotelBaltimore)
+        baltimore.title = "Hotel Baltimore"
+        baltimore.map = gmsMapView
+        
+        location.map = gmsMapView
+      }
 
-        // Do any additional setup after loading the view.
+    }
+  
+    func getLocationsForDistrict() -> [LocationViewModel] {
+      let api = API.sharedInstance
+//      api.locations(district: district!) { response in
+//        print(response)
+//      }
+      return api.locations(district: district!)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }

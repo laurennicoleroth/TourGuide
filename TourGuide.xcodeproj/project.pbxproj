@@ -17,6 +17,9 @@
 		96371AA31DA9B10B00EC1D3E /* TourGuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96371AA21DA9B10B00EC1D3E /* TourGuideUITests.swift */; };
 		96371AB11DA9B4FE00EC1D3E /* DistrictTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96371AB01DA9B4FE00EC1D3E /* DistrictTableViewController.swift */; };
 		96371AB31DA9BCAE00EC1D3E /* MapTourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96371AB21DA9BCAE00EC1D3E /* MapTourViewController.swift */; };
+		96371AB51DA9CB4400EC1D3E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96371AB41DA9CB4400EC1D3E /* Location.swift */; };
+		96371AB71DA9CBBB00EC1D3E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96371AB61DA9CBBB00EC1D3E /* API.swift */; };
+		96371AB91DA9CD3600EC1D3E /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96371AB81DA9CD3600EC1D3E /* LocationViewModel.swift */; };
 		998327F62AC9C7B87CFAF8BB /* Pods_TourGuide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206FA3854CE451B604AE1AA1 /* Pods_TourGuide.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +61,9 @@
 		96371AA41DA9B10B00EC1D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96371AB01DA9B4FE00EC1D3E /* DistrictTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistrictTableViewController.swift; sourceTree = "<group>"; };
 		96371AB21DA9BCAE00EC1D3E /* MapTourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTourViewController.swift; sourceTree = "<group>"; };
+		96371AB41DA9CB4400EC1D3E /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		96371AB61DA9CBBB00EC1D3E /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		96371AB81DA9CD3600EC1D3E /* LocationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		A82D23873140853A9B6BEDA2 /* Pods-TourGuideUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TourGuideUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TourGuideUITests/Pods-TourGuideUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B5F7FEC043C3C4A83261CD4F /* Pods-TourGuide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TourGuide.release.xcconfig"; path = "Pods/Target Support Files/Pods-TourGuide/Pods-TourGuide.release.xcconfig"; sourceTree = "<group>"; };
 		C4CDC7EE4245084FF8BAB740 /* Pods-TourGuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TourGuideTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TourGuideTests/Pods-TourGuideTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +152,9 @@
 				96371A8E1DA9B10B00EC1D3E /* Info.plist */,
 				96371AB01DA9B4FE00EC1D3E /* DistrictTableViewController.swift */,
 				96371AB21DA9BCAE00EC1D3E /* MapTourViewController.swift */,
+				96371AB41DA9CB4400EC1D3E /* Location.swift */,
+				96371AB61DA9CBBB00EC1D3E /* API.swift */,
+				96371AB81DA9CD3600EC1D3E /* LocationViewModel.swift */,
 			);
 			path = TourGuide;
 			sourceTree = "<group>";
@@ -453,8 +462,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				96371A831DA9B10B00EC1D3E /* AppDelegate.swift in Sources */,
+				96371AB91DA9CD3600EC1D3E /* LocationViewModel.swift in Sources */,
 				96371AB11DA9B4FE00EC1D3E /* DistrictTableViewController.swift in Sources */,
+				96371AB51DA9CB4400EC1D3E /* Location.swift in Sources */,
 				96371AB31DA9BCAE00EC1D3E /* MapTourViewController.swift in Sources */,
+				96371AB71DA9CBBB00EC1D3E /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

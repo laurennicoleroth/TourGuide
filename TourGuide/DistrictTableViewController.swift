@@ -95,6 +95,7 @@ class DistrictTableViewController: UITableViewController {
         let districtName = self.districtNames[(selectedIndexPath! as NSIndexPath).row]
         debugPrint("Setting name as title: ", districtName)
 //        destVc.districtNameLabel.text = districtName
+        destVc.district = (selectedIndexPath?.row)! + 1
         destVc.title = String(districtName)
     }
 
