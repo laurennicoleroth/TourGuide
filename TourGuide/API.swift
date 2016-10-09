@@ -18,7 +18,8 @@ class API {
   
   func locations(district: Int, completion : @escaping ([LocationViewModel]) -> ()) {
 
-    let urlString = "http://blackbeardev.com:3000/districts/\(district)"
+//    let urlString = "http://blackbeardev.com:3000/districts/\(district)"
+    let urlString = "http://pacific-forest-37623.herokuapp.com/districts/\(district)"
 
     Alamofire.request(urlString, method: .get, encoding: JSONEncoding.default)
       .downloadProgress() { progress in

@@ -13,6 +13,14 @@ import GoogleMaps
 class LocationViewModel {
   private var location: Location
   
+  var latitude : Double? {
+    return location.latitude!
+  }
+  
+  var longitude : Double? {
+    return location.longitude!
+  }
+  
   var mapMarker : GMSMarker {
 
     let position = CLLocationCoordinate2DMake(self.location.latitude!, self.location.longitude!)

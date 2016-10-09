@@ -18,13 +18,7 @@ class MapTourViewController: UIViewController, GMSMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
       
-      let hotel = GMSCameraPosition.camera(withLatitude: hotelBaltimore.latitude,
-                                                       longitude: hotelBaltimore.longitude, zoom: 14)
-    
-      gmsMapView.camera = hotel
-
-      getLocationsForDistrict()
-
+        getLocationsForDistrict()
 
     }
   
@@ -33,11 +27,21 @@ class MapTourViewController: UIViewController, GMSMapViewDelegate {
       api.locations(district: district!) { response in
         print("Response from api: ", response)
         
+        if response.count < 1 {
+          print("DIE")
+        } else {
+        
+        let start = GMSCameraPosition.camera(withLatitude: (response.first?.latitude)!,
+                                 longitude: (response.first?.longitude)!, zoom: 14)
+        
+        self.gmsMapView.camera = start
+        
           for location in response {
             print("Drawing marker for location: ", location.mapMarker)
             let marker = location.mapMarker
             marker.map = self.gmsMapView
           }
+        }
       }
 
     }
