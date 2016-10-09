@@ -22,22 +22,13 @@ class MapTourViewController: UIViewController, GMSMapViewDelegate {
                                                        longitude: hotelBaltimore.longitude, zoom: 14)
     
       gmsMapView.camera = hotel
+
       
       let locations = getLocationsForDistrict()
       
       for location in locations {
-        let eiffelTower = CLLocationCoordinate2DMake(48.858731, 2.2944813)
-        
-        let eiffel = GMSMarker(position: eiffelTower)
-        eiffel.title = "EiffelTower"
-        eiffel.map = gmsMapView
-        eiffel.snippet = "Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France"
-        
-        let baltimore = GMSMarker(position: hotelBaltimore)
-        baltimore.title = "Hotel Baltimore"
-        baltimore.map = gmsMapView
-        
-        location.map = gmsMapView
+        let marker = location.mapMarker
+        marker.map = gmsMapView
       }
 
     }
